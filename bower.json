@@ -1,0 +1,23 @@
+{
+  "name": "mocha-portfolio",
+  "version": "0.0.0",
+  "homepage": "https://github.com/margaretclinard/mocha-portfolio",
+  "authors": [
+    "Margaret Clinard <margaret.clinard@gmail.com>"
+  ],
+  "description": "This is a stock app demonstrating testing front-end JavaScript with Mocha and Chai",
+  "main": "public/index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mocha": "~2.1.0",
+    "chai": "~1.10.0"
+  }
+}
