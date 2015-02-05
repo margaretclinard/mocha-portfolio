@@ -6,6 +6,12 @@ function getStock(symbol, cb) {
   }, 'jsonp');
 }
 
+function addStockToTable(stock) {
+  var $row = $('<tr></tr>');
+
+  $('tbody').append($row);
+}
+
 function hello() {
   return 'world';
 }
