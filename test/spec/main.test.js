@@ -40,9 +40,21 @@ describe('addStockToTable', function () {
         $row  = addStockToTable(stock),
         $tds  = $row.find('td');
 
-    $tds.length.should.equal(3);
+    $tds.length.should.equal(4);
     $($tds[0]).text().should.equal('Super Corp');
     $($tds[1]).text().should.equal('SCRP');
     $($tds[2]).text().should.equal('12.34');
+    $($tds[3]).text().should.equal('12.34');
+  });
+});
+
+describe('getMultipleStocks', function () {
+  it('should return multiple stock objects', function (done) {
+    getMultipleStocks(['AAPL', 'MSFT'], function (stocks) {
+      stocks.length.should.equal(2);
+      stocks[0].Name.should.equal('Apple Inc');
+      stocks[1].Name.should.equal('Microsoft Corp');
+      done();
+    });
   });
 });
