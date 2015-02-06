@@ -23,16 +23,21 @@ function getMultipleStocks(symbols, cb) {
 }
 
 function addStockToTable(stock) {
-  var $row = $('<tr></tr>');
 
-  $row.append('<td>' + stock.Name + '</td>');
-  $row.append('<td>' + stock.Symbol + '</td>');
-  $row.append('<td>' + stock.LastPrice + '</td>');
-  $row.append('<td>' + stock.LastPrice + '</td>');
+  if (stock.Message) {
+    return;
+  }
+  else {
+    var $row = $('<tr></tr>');
+    $row.append('<td>' + stock.Name + '</td>');
+    $row.append('<td>' + stock.Symbol + '</td>');
+    $row.append('<td>' + stock.LastPrice + '</td>');
+    $row.append('<td>' + stock.LastPrice + '</td>');
 
-  $('tbody').append($row);
+    $('tbody').append($row);
 
-  return $row;
+    return $row;
+  }
 }
 
 function refreshStockPrices(stocks) {
