@@ -58,3 +58,22 @@ describe('getMultipleStocks', function () {
     });
   });
 });
+
+describe('refreshStockPrices', function () {
+  it('should edit each stock in the table with the new price', function () {
+    var stocks = [
+      { Symbol: 'AAPL' , LastPrice: 12.45 },
+      { Symbol: 'MSFT' , LastPrice: 23.56 }
+    ],
+        $tbody = $('tbody'),
+        $trs   = $('tr');
+
+    $tbody.append('<tr><td>Apple Inc</td><td>AAPL</td><td>12.34</td><td>12.34</td></tr>');
+    $tbody.append('<tr><td>Microsoft Corp</td><td>MSFT</td><td>23.45</td><td>23.45</td></tr>');
+
+    refreshStockPrices(stocks);
+
+    $($($trs[0]).find('td')[3]).text().should.equal('12.45');
+    $($($trs[1]).find('td')[3]).text().should.equal('23.56');
+  });
+});
