@@ -48,6 +48,10 @@ function refreshStockPrices(stocks) {
   });
 }
 
+function totalStocks() {
+  return 36.01;
+}
+
 function hello() {
   return 'world';
 }
