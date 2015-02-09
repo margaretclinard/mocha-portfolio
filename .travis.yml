@@ -9,8 +9,11 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 script:
   - npm run test -- --single-run
+after_script:
+  - cat ./coverage/PhantomJS*/lcov.info | ./node_modules/codeclimate-test-reporter/bin/codeclimate.js
 notifications:
   email: false
 env:
   global:
-    secure: a8eheB3jZpRcSj9IKslshlebDqFL/CwgSii9LIe5aDLXzZk64HMaD1fl6wPXuhZQOID0hjiNTDq1os2Xykrb93WL0w3x5mJIj6bj4Sv+ZXfuuebPnW5hZ8KvUfV0kk/jPKRqVekzwulXwKBOUjIIDGpfQaLmSo786Sjv0jonz0w=
+    - secure: a8eheB3jZpRcSj9IKslshlebDqFL/CwgSii9LIe5aDLXzZk64HMaD1fl6wPXuhZQOID0hjiNTDq1os2Xykrb93WL0w3x5mJIj6bj4Sv+ZXfuuebPnW5hZ8KvUfV0kk/jPKRqVekzwulXwKBOUjIIDGpfQaLmSo786Sjv0jonz0w=
+    - secure: HU3QSSE2t6sckK8yJsoN6d8ugaW90iStGQuYCd7CnbDzMFkriR68agsFt/deXX4jTenllVYFha6mFcXUxdViaOs79SazXgNDKCG6llmAaD/xqfwYRY96Cycjogmu93P9Ej8NfMjk3i6AaVCjQZTxWA2hHbe29WOoyhqyxXb45Lw=
