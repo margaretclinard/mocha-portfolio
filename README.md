@@ -8,3 +8,5 @@ This is a stock app demonstrating testing front-end JavaScript with Mocha and Ch
 [![npm Dependency Status](https://www.versioneye.com/user/projects/54d8df76c1bbbd9bd70000be/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54d8df76c1bbbd9bd70000be)
 
 [![bower Dependency Status](https://www.versioneye.com/user/projects/54d8df74c1bbbd5f820000df/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54d8df74c1bbbd5f820000df)
+
+![NSS-Cohort-8](https://img.shields.io/badge/NSS-cohort--8-6a1ab0.svg)
